@@ -4,3 +4,14 @@ h1{
 label{
     color: grey;
 }
+input[type="button"] {
+    font-size: 110%;
+    font-weight: 100;
+    background:chocolate;
+    border-color:coral;
+    box-shadow: 0 3px 0 brown;
+    color: #fff;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
