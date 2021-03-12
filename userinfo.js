@@ -98,9 +98,9 @@ function validateForm() {
                           "Card number: " + cardno + "\n" +
                           "Date: " + date + "\n" +
                           "cvv: " + cvv + "\n";
-                          "Card name: " + card + "\n" ;
+                          "Card name: " + card + "\n" +
+                         "Email: " + email.join(", ");
         
         // Display input data in a dialog box before submitting the form
         alert(dataPreview);
-    }
-};
+    };
