@@ -56,21 +56,49 @@ function validateForm() {
             mobileErr = false;
         }
     }
+    if(cardno == "") {
+        printError("cardnoErr", "Please enter card number");
+    } else {
+            printError("cardnoErr", "");
+            cardErr = false;
+        }
+    }
+    if(cardname == "") {
+        printError("cardameErr", "Please enter card name");
+    } else {
+            printError("cardnameErr", "");
+            cardnameErr = false;
+        }
+     if(cvv == "") {
+        printError("cvvErr", "Please enter cvv");
+    } else {
+            printError("cardnameErr", "");
+            cvvErr = false;
+        }
+     if(date == "") {
+        printError("dateErr", "Please enter date");
+    } else {
+            printError("cardnameErr", "");
+            dateErr = false;
+        }
+    
+
     
   
-    }
+    
     
     // Prevent the form from being submitted if there are any errors
-    if((nameErr || emailErr || mobileErr || cardnoErr || cvvErr) == true) {
+    if((nameErr || emailErr || mobileErr || cardErr || dateErr ||cvvErr ||cardnameErrr) == true) {
        return false;
     } else {
         // Creating a string from input data for preview
         var dataPreview = "You've entered the following details: \n" +
                           "Full Name: " + name + "\n" +
-                          "Email Address: " + email + "\n" +
                           "Mobile Number: " + mobile + "\n" +
-                          "Country: " + country + "\n" +
-                          "Gender: " + gender + "\n";
+                          "Card number: " + cardno + "\n" +
+                          "Date: " + date + "\n" +
+                          "cvv: " + cvv + "\n";
+                          "Card name: " + card + "\n" ;
         
         // Display input data in a dialog box before submitting the form
         alert(dataPreview);
